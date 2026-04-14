@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
   <title>Denim Legends: The Last Weavers of Japan</title>
   <meta name="description" content="An independent documentary following a French artisan through a two-month apprenticeship at a Japanese selvedge denim mill. Directed by Jiawa Liu.">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Denim Legends: The Last Weavers of Japan">
   <meta property="og:description" content="An independent documentary following a French artisan through a two-month apprenticeship at a Japanese selvedge denim mill. Directed by Jiawa Liu.">
   <meta property="og:image" content="preview.jpg">
@@ -20,66 +16,43 @@
   <meta name="twitter:image" content="preview.jpg">
 
   <style>
-    /* ── RESET ── */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* ── TOKENS ── */
     :root {
-      --bg:        #0A0A0A;
-      --text:      #F0EDE8;
-      --muted:     #888880;
-      --font:      'Optima Nova', Optima, 'Optima LT Std', 'Palatino Linotype', Palatino, 'Book Antiqua', serif;
-      --max:       1440px;
-      --pad-x:     80px;
-      --pad-x-sm:  24px;
+      --bg:    #0A0A0A;
+      --text:  #F0EDE8;
+      --muted: #888880;
+      --font:  'Optima Nova', Optima, 'Optima LT Std', 'Palatino Linotype', Palatino, serif;
     }
 
-    /* ── BASE ── */
     html { scroll-behavior: smooth; }
 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: var(--font);
-      font-size: 16px;
-      line-height: 1.75;
+      overflow-x: hidden;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+    img { display: block; max-width: 100%; }
+    a   { text-decoration: none; color: inherit; }
 
-    a { text-decoration: none; color: inherit; }
-
-    /* ── SECTION LABEL ── */
     .label {
-      display: block;
+      font-family: var(--font);
       font-size: 11px;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 40px;
     }
 
-    /* ── SECTION WRAPPER ── */
-    .section {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 120px var(--pad-x);
-      border-top: 1px solid rgba(240,237,232,0.07);
-    }
-
-    /* ─────────────────────────────────────────
-       SECTION 1 — HERO
-    ───────────────────────────────────────── */
+    /* ══════════════════════════════════
+       1. HERO
+    ══════════════════════════════════ */
     .hero {
       position: relative;
       width: 100%;
@@ -88,7 +61,7 @@
       overflow: hidden;
       display: flex;
       align-items: flex-end;
-      padding: 72px var(--pad-x);
+      padding: 72px 54px;
     }
 
     .hero__bg {
@@ -103,33 +76,32 @@
     .hero__overlay {
       position: absolute;
       inset: 0;
-      background: rgba(10, 10, 10, 0.35);
+      background: rgba(10,10,10,0.35);
     }
 
     .hero__content {
       position: relative;
       z-index: 2;
-      max-width: 720px;
     }
 
     .hero__title {
       font-family: var(--font);
-      font-size: clamp(28px, 3.5vw, 52px);
+      font-size: clamp(22px, 2.5vw, 36px);
       font-weight: 400;
       line-height: 1.1;
       letter-spacing: 0.1em;
-      color: var(--text);
       text-transform: uppercase;
-      margin-bottom: 20px;
+      color: var(--text);
+      margin-bottom: 22px;
     }
 
     .hero__logline {
-      font-size: clamp(14px, 1.2vw, 17px);
+      font-size: clamp(13px, 1.1vw, 16px);
       letter-spacing: 0.1em;
       line-height: 1.65;
       color: var(--text);
-      max-width: 520px;
-      margin-bottom: 14px;
+      max-width: 516px;
+      margin-bottom: 12px;
     }
 
     .hero__byline {
@@ -138,56 +110,72 @@
       color: var(--muted);
     }
 
-    /* ─────────────────────────────────────────
-       SECTION 2 — THE FILM
-    ───────────────────────────────────────── */
-    .film__grid {
+    /* ══════════════════════════════════
+       2. THE FILM
+       Narrow text left, stacked images right — flush, no gap
+    ══════════════════════════════════ */
+    .film {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 58% 42%;
+      min-height: 100vh;
       align-items: start;
     }
 
-    .film__left {}
+    .film__left {
+      padding: 91px 60px 80px 107px;
+    }
+
+    .film__left .label {
+      display: block;
+      margin-bottom: 88px;
+    }
 
     .film__synopsis {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.75;
       letter-spacing: 0.08em;
       color: var(--text);
-      margin-bottom: 40px;
+      margin-bottom: 32px;
+      max-width: 323px;
     }
 
     .film__synopsis p + p { margin-top: 1.4em; }
 
     .film__technical {
       font-size: 11px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.06em;
       color: var(--muted);
       line-height: 1.8;
-      border-top: 1px solid rgba(240,237,232,0.08);
-      padding-top: 20px;
+      max-width: 323px;
     }
 
+    /* Images flush stacked, no gap */
     .film__right {
       display: flex;
       flex-direction: column;
-      gap: 0;
     }
 
     .film__right img {
       width: 100%;
-      aspect-ratio: 16/9;
+      aspect-ratio: 606 / 341;
       object-fit: cover;
+      display: block;
     }
 
-    /* ─────────────────────────────────────────
-       SECTION 3 — TRAILER
-    ───────────────────────────────────────── */
+    /* ══════════════════════════════════
+       3. TRAILER
+       Centred embed in full-width dark section
+    ══════════════════════════════════ */
+    .trailer {
+      padding: 100px 54px 80px;
+    }
+
     .trailer__embed-wrap {
       position: relative;
       width: 100%;
-      aspect-ratio: 16/9;
+      max-width: 940px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
       background: #111;
     }
 
@@ -200,139 +188,150 @@
     }
 
     .trailer__caption {
-      margin-top: 18px;
+      margin-top: 20px;
       font-size: 11px;
       letter-spacing: 0.18em;
       color: var(--muted);
       text-align: center;
     }
 
-    /* ─────────────────────────────────────────
-       SECTION 4 — CONTEXT
-    ───────────────────────────────────────── */
+    /* ══════════════════════════════════
+       4. CONTEXT
+       Large image LEFT (~58%), label + text RIGHT
+    ══════════════════════════════════ */
+    .context {
+      display: grid;
+      grid-template-columns: 58% 1fr;
+      min-height: 640px;
+    }
+
     .context__image {
-      width: 100%;
-      margin-bottom: 0;
       overflow: hidden;
     }
 
     .context__image img {
       width: 100%;
-      height: 480px;
+      height: 100%;
       object-fit: cover;
       object-position: center 40%;
       display: block;
     }
 
-    .context__grid {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 80px;
-      align-items: start;
-      padding-top: 80px;
+    .context__right {
+      padding: 80px 54px 80px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
-    .context__aside {
-      position: sticky;
-      top: 80px;
-    }
-
-    .context__aside-label {
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      line-height: 2.2;
+    .context__right .label {
+      display: block;
+      margin-bottom: 48px;
     }
 
     .context__body {
-      font-size: 16px;
+      font-size: 14px;
       letter-spacing: 0.08em;
-      line-height: 1.75;
+      line-height: 1.8;
       color: var(--text);
+      max-width: 323px;
     }
 
     .context__body p + p { margin-top: 1.5em; }
 
-    /* ─────────────────────────────────────────
-       SECTION 5 — FILMMAKERS
-    ───────────────────────────────────────── */
+    /* ══════════════════════════════════
+       5. FILMMAKERS
+       Full-width banner, then label + two cards
+    ══════════════════════════════════ */
     .filmmakers__banner {
       width: 100%;
       overflow: hidden;
-      margin-bottom: 0;
     }
 
     .filmmakers__banner img {
       width: 100%;
-      height: 420px;
+      height: 533px;
       object-fit: cover;
       object-position: center 30%;
       display: block;
     }
 
-    .filmmakers__grid {
+    /* Grid: label | filmmaker-1 | spacer | filmmaker-2 */
+    .filmmakers__body {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      margin-top: 72px;
+      grid-template-columns: 238px 1fr 80px 1fr;
+      padding: 96px 78px 120px;
+      align-items: start;
+    }
+
+    .filmmakers__label { padding-top: 2px; }
+
+    /* Each filmmaker: portrait left, text right */
+    .filmmaker {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 24px;
+      align-items: start;
     }
 
     .filmmaker__portrait {
-      width: 120px;
-      height: 150px;
+      width: 145px;
+      height: 183px;
       object-fit: cover;
       object-position: center top;
-      margin-bottom: 24px;
     }
 
     .filmmaker__name {
-      font-size: 18px;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       color: var(--muted);
-      margin-bottom: 4px;
+      margin-bottom: 14px;
     }
 
     .filmmaker__bio {
-      font-size: 15px;
-      letter-spacing: 0.06em;
-      line-height: 1.8;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      line-height: 1.75;
       color: var(--text);
       margin-bottom: 16px;
+      max-width: 297px;
     }
 
     .filmmaker__handle {
-      font-size: 12px;
-      letter-spacing: 0.15em;
+      font-size: 11px;
+      letter-spacing: 0.12em;
       color: var(--muted);
+      transition: color 0.2s;
     }
 
     .filmmaker__handle:hover { color: var(--text); }
 
-    /* ─────────────────────────────────────────
-       SECTION 6 — PRESS & PARTNERSHIP
-    ───────────────────────────────────────── */
+    /* ══════════════════════════════════
+       6. PRESS & PARTNERSHIP
+    ══════════════════════════════════ */
     .press {
       text-align: center;
-      padding-bottom: 160px;
+      padding: 120px 54px 180px;
     }
 
     .press .label {
-      justify-content: center;
+      display: block;
+      margin-bottom: 40px;
     }
 
     .press__statement {
-      font-size: clamp(15px, 1.3vw, 18px);
+      font-size: 14px;
       font-style: italic;
       letter-spacing: 0.08em;
       line-height: 1.85;
       color: var(--text);
-      max-width: 600px;
-      margin: 0 auto 40px;
+      max-width: 547px;
+      margin: 0 auto 48px;
     }
 
     .press__contact-label {
+      display: block;
       font-size: 11px;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -341,7 +340,7 @@
     }
 
     .press__email {
-      font-size: 17px;
+      font-size: 16px;
       font-style: italic;
       letter-spacing: 0.1em;
       color: var(--text);
@@ -353,11 +352,10 @@
     .press__email:hover { border-color: rgba(240,237,232,0.6); }
 
     .press__handles {
-      margin-top: 80px;
+      margin-top: 120px;
       font-size: 11px;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       color: var(--muted);
-      text-transform: uppercase;
     }
 
     .press__handles a {
@@ -367,84 +365,70 @@
 
     .press__handles a:hover { color: var(--text); }
 
-    /* ─────────────────────────────────────────
-       RESPONSIVE — MOBILE
-    ───────────────────────────────────────── */
+    /* ══════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════ */
+    @media (max-width: 1100px) {
+      .filmmakers__body {
+        grid-template-columns: 1fr 1fr;
+        gap: 0 48px;
+        padding: 72px 40px 100px;
+      }
+      .filmmakers__label {
+        grid-column: 1 / -1;
+        margin-bottom: 40px;
+      }
+      /* hide spacer column */
+      .filmmakers__spacer { display: none; }
+    }
+
     @media (max-width: 768px) {
-      :root {
-        --pad-x: var(--pad-x-sm);
-      }
+      .hero { padding: 48px 24px; }
+      .hero__title { font-size: 22px; }
 
-      .section {
-        padding: 80px var(--pad-x-sm);
-      }
+      .film { grid-template-columns: 1fr; }
+      .film__left { padding: 64px 24px 48px; }
+      .film__synopsis,
+      .film__technical { max-width: 100%; }
 
-      .hero {
-        padding: 48px var(--pad-x-sm);
-        min-height: 100svh;
-      }
+      .trailer { padding: 64px 24px; }
 
-      .hero__title {
-        font-size: 28px;
-      }
+      .context { grid-template-columns: 1fr; }
+      .context__image { height: 300px; }
+      .context__image img { height: 300px; }
+      .context__right { padding: 56px 24px; }
+      .context__body { max-width: 100%; }
 
-      .film__grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .film__right {
-        gap: 0;
-      }
-
-      .context__image img {
-        height: 280px;
-      }
-
-      .context__grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding-top: 48px;
-      }
-
-      .context__aside {
-        position: static;
-      }
-
-      .filmmakers__banner img {
-        height: 260px;
-      }
-
-      .filmmakers__grid {
+      .filmmakers__banner img { height: 260px; }
+      .filmmakers__body {
         grid-template-columns: 1fr;
         gap: 56px;
-        margin-top: 48px;
+        padding: 56px 24px 80px;
       }
+      .filmmaker {
+        grid-template-columns: 100px 1fr;
+        gap: 16px;
+      }
+      .filmmaker__portrait { width: 100px; height: 126px; }
+      .filmmaker__bio { max-width: 100%; }
 
-      .press {
-        padding-bottom: 100px;
-      }
-
-      .press__statement {
-        font-size: 16px;
-      }
+      .press { padding: 80px 24px 120px; }
+      .press__statement { max-width: 100%; }
     }
 
     @media (max-width: 480px) {
-      .hero__title { font-size: 24px; }
-      .film__synopsis { font-size: 15px; }
+      .filmmaker { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ── SECTION 1: HERO ── -->
+  <!-- 1. HERO -->
   <section aria-label="Hero">
     <div class="hero">
-      <img
-        class="hero__bg"
+      <img class="hero__bg"
         src="trailer-edit-5-aptions-creation-seque-00-01-52-08-still-009-10.png"
-        alt="Arthur Leclercq working at a shuttle loom in Okayama, Japan"
+        alt="Arthur Leclercq at a shuttle loom, Okayama"
       />
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="hero__content">
@@ -455,46 +439,29 @@
     </div>
   </section>
 
-  <!-- ── SECTION 2: THE FILM ── -->
+  <!-- 2. THE FILM -->
   <section aria-label="The Film">
-    <div class="section">
-      <span class="label">The Film</span>
-      <div class="film__grid">
-
-        <div class="film__left">
-          <div class="film__synopsis">
-            <p>Denim Legends: The Last Weavers of Japan follows Arthur Leclercq, a Paris-based denim artisan, through a two-month apprenticeship at a historic selvedge denim mill in Okayama — an opportunity never before granted to a foreigner.</p>
-            <p>In suffocating midsummer heat, amid the noise of post-war shuttle looms and without a shared language, Arthur learns to operate and maintain machines that built Japan's reputation for the world's finest denim. Through observation and silent collaboration, he forms bonds with the artisans who keep this craft alive.</p>
-            <p>The film reveals a world rarely seen, and even more rarely filmed — one that may not survive intact.</p>
-          </div>
-          <p class="film__technical">
-            Feature Documentary / Limited Series (3 × 30 min)&nbsp;&nbsp;|&nbsp;&nbsp;Filmed in Okayama, Japan&nbsp;&nbsp;|&nbsp;&nbsp;Languages: Japanese, French, English&nbsp;&nbsp;|&nbsp;&nbsp;Status: Post-production
-          </p>
+    <div class="film">
+      <div class="film__left">
+        <span class="label">The Film</span>
+        <div class="film__synopsis">
+          <p>Denim Legends: The Last Weavers of Japan follows Arthur Leclercq, a Paris-based denim artisan, through a two-month apprenticeship at a historic selvedge denim mill in Okayama — an opportunity never before granted to a foreigner.</p>
+          <p>In suffocating midsummer heat, amid the noise of post-war shuttle looms and without a shared language, Arthur learns to operate and maintain machines that built Japan's reputation for the world's finest denim. Through observation and silent collaboration, he forms bonds with the artisans who keep this craft alive.</p>
+          <p>The film reveals a world rarely seen, and even more rarely filmed — one that may not survive intact.</p>
         </div>
-
-        <div class="film__right">
-          <img
-            src="dl-still-5-10.png"
-            alt="Film still — Denim Legends"
-          />
-          <img
-            src="trailer-edit-5-aptions-creation-seque-00-04-41-21-still-013-10.png"
-            alt="Film still — Denim Legends"
-          />
-          <img
-            src="trailer-edit-5-aptions-creation-seque-00-00-18-12-still-014-10.png"
-            alt="Film still — Denim Legends"
-          />
-        </div>
-
+        <p class="film__technical">Feature Documentary / Limited Series (3 × 30 min) | Filmed in Okayama, Japan | Languages: Japanese, French, English | Status: Post-production</p>
+      </div>
+      <div class="film__right">
+        <img src="dl-still-5-10.png" alt="Film still — rural Japan" />
+        <img src="trailer-edit-5-aptions-creation-seque-00-04-41-21-still-013-10.png" alt="Film still — Denim Legends" />
+        <img src="trailer-edit-5-aptions-creation-seque-00-00-18-12-still-014-10.png" alt="Film still — Arthur on the train" />
       </div>
     </div>
   </section>
 
-  <!-- ── SECTION 3: TRAILER ── -->
+  <!-- 3. TRAILER -->
   <section aria-label="Official Trailer">
-    <div class="section">
-      <span class="label">Official Trailer</span>
+    <div class="trailer">
       <div class="trailer__embed-wrap">
         <iframe
           src="https://www.youtube.com/embed/DUIWp933gyQ?rel=0&modestbranding=1"
@@ -507,24 +474,17 @@
     </div>
   </section>
 
-  <!-- ── SECTION 4: CONTEXT ── -->
+  <!-- 4. CONTEXT -->
   <section aria-label="Context">
-    <div class="context__image">
-      <img
-        src="trailer-edit-5-aptions-creation-seque-00-01-40-18-still-007-10.png"
-        alt="Arthur Leclercq among shuttle looms at Yamaashi Orimono, Okayama"
-      />
-    </div>
-    <div class="section" style="border-top: none; padding-top: 0;">
-      <div class="context__grid">
-        <aside class="context__aside">
-          <span class="context__aside-label">
-            Context<br><br>
-            Okayama<br>Prefecture<br><br>
-            Craft<br>Preservation<br><br>
-            Cultural<br>Heritage
-          </span>
-        </aside>
+    <div class="context">
+      <div class="context__image">
+        <img
+          src="trailer-edit-5-aptions-creation-seque-00-01-40-18-still-007-10.png"
+          alt="Shuttle looms at Yamaashi Orimono weaving mill, Okayama"
+        />
+      </div>
+      <div class="context__right">
+        <span class="label">Context</span>
         <div class="context__body">
           <p>In the hills of Okayama Prefecture, a few family-run mills still operate on vintage shuttle looms from the 1940s and '50s. These machines built Japan's reputation as the global benchmark for selvedge denim weaving.</p>
           <p>Today, that knowledge is under threat. The challenge is not demand — Japanese selvedge denim is more sought after than ever — but the scarcity of people capable of operating and maintaining the old looms. As veteran craftsmen retire, the expertise required to keep these machines running is fading with them.</p>
@@ -534,7 +494,7 @@
     </div>
   </section>
 
-  <!-- ── SECTION 5: FILMMAKERS ── -->
+  <!-- 5. FILMMAKERS -->
   <section aria-label="The Filmmakers">
     <div class="filmmakers__banner">
       <img
@@ -542,42 +502,42 @@
         alt="Jiawa Liu filming Arthur Leclercq at the weaving mill"
       />
     </div>
-    <div class="section" style="border-top: none; padding-top: 80px;">
-      <span class="label">The Filmmakers</span>
-      <div class="filmmakers__grid">
-
-        <div class="filmmaker">
-          <img
-            class="filmmaker__portrait"
-            src="ni-4-a-2428-mov-09-40-09-23-still-001-20.png"
-            alt="Jiawa Liu, Director"
-          />
+    <div class="filmmakers__body">
+      <div class="filmmakers__label">
+        <span class="label">The Filmmakers</span>
+      </div>
+      <div class="filmmaker">
+        <img class="filmmaker__portrait"
+          src="ni-4-a-2428-mov-09-40-09-23-still-001-20.png"
+          alt="Jiawa Liu"
+        />
+        <div class="filmmaker__text">
           <p class="filmmaker__name">Jiawa Liu — Director</p>
           <p class="filmmaker__bio">Jiawa Liu is a London and Paris-based filmmaker and creative director. Her background spans a decade of editorial and film work for international publications and luxury brands, including Harper's Bazaar and Vogue. She founded Beige Pill Productions in 2019, a creative studio focused on visual storytelling across film, fashion, and craft. Denim Legends is her first independent long-form documentary.</p>
           <a class="filmmaker__handle" href="https://www.instagram.com/beigerenegade" target="_blank" rel="noopener">@beigerenegade</a>
         </div>
-
-        <div class="filmmaker">
-          <img
-            class="filmmaker__portrait"
-            src="_000008680017-10.png"
-            alt="Arthur Leclercq, Protagonist"
-          />
+      </div>
+      <div class="filmmakers__spacer" aria-hidden="true"></div>
+      <div class="filmmaker">
+        <img class="filmmaker__portrait"
+          src="_000008680017-10.png"
+          alt="Arthur Leclercq"
+        />
+        <div class="filmmaker__text">
           <p class="filmmaker__name">Arthur Leclercq — Protagonist</p>
           <p class="filmmaker__bio">Arthur Leclercq is a Paris-based denim artisan and founder of Superstitch, an atelier in the 6th arrondissement dedicated to traditional denim construction. Recognised internationally for his mastery of vintage machinery and deep knowledge of denim history, he is among the very few outside Japan capable of operating the full range of specialised machines required to construct a pair of jeans to golden-era standards.</p>
           <a class="filmmaker__handle" href="https://www.instagram.com/superstitchmfgparis" target="_blank" rel="noopener">@superstitchmfgparis</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── SECTION 6: PRESS & PARTNERSHIP ── -->
+  <!-- 6. PRESS & PARTNERSHIP -->
   <section aria-label="Press and Partnership">
-    <div class="section press">
+    <div class="press">
       <span class="label">Press &amp; Partnership</span>
       <p class="press__statement">Denim Legends is currently in post-production. The filmmakers welcome contact from press, cultural institutions, and organisations aligned with the preservation and transmission of endangered craft knowledge.</p>
-      <p class="press__contact-label">Contact</p>
+      <span class="press__contact-label">Contact</span>
       <a class="press__email" href="mailto:projects@beigerenegade.com">projects@beigerenegade.com</a>
       <div class="press__handles">
         <a href="https://www.instagram.com/denimlegendsfilm" target="_blank" rel="noopener">@denimlegendsfilm</a>
