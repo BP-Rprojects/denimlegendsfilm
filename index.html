@@ -52,13 +52,23 @@ a{color:inherit;text-decoration:none;}
   align-items:flex-end;
   padding:4vw;
 }
-.hero img{
+.hero picture{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
-  object-fit:cover;
   z-index:0;
+}
+.hero picture img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+}
+@media(max-width:600px){
+  .hero picture img{
+    object-position:65% center;
+  }
 }
 .hero-overlay{
   position:absolute;
@@ -245,7 +255,18 @@ a{color:inherit;text-decoration:none;}
 
 <!-- 1. HERO -->
 <section class="hero">
-  <img src="trailer-edit-5-aptions-creation-seque-00-01-52-08-still-009-10.png" alt="Arthur Leclercq at a shuttle loom, Okayama">
+  <picture>
+    <!-- Portrait image for mobile (screens up to 600px wide) -->
+    <source
+      media="(max-width: 600px)"
+      srcset="trailer-edit-5-aptions-creation-seque-00-01-40-18-still-007-10.png"
+    >
+    <!-- Default landscape image for tablet and desktop -->
+    <img
+      src="trailer-edit-5-aptions-creation-seque-00-01-52-08-still-009-10.png"
+      alt="Arthur Leclercq at a shuttle loom, Okayama"
+    >
+  </picture>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>DENIM LEGENDS:<br>THE LAST WEAVERS OF JAPAN</h1>
