@@ -3,53 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Denim Legends — The Last Weavers of Japan</title>
+
+<title>Denim Legends: The Last Weavers of Japan</title>
 <meta name="description" content="An independent documentary following a French artisan through a two-month apprenticeship at a Japanese selvedge denim mill. Directed by Jiawa Liu.">
+
 <meta property="og:title" content="Denim Legends: The Last Weavers of Japan">
 <meta property="og:description" content="An independent documentary following a French artisan through a two-month apprenticeship at a Japanese selvedge denim mill. Directed by Jiawa Liu.">
 <meta property="og:image" content="preview.jpg">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:#0A0A0A;color:#F0EDE8;font-family:Optima,serif;overflow-x:hidden;line-height:1.4;}
+body{
+background:#0A0A0A;
+color:#F0EDE8;
+font-family:Optima,serif;
+overflow-x:hidden;
+line-height:1.5;
+}
 img{display:block;width:100%;}
-section{width:100%;}
-.container{width:100%;max-width:1600px;margin:auto;}
-.label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;opacity:.7;margin-bottom:35px;display:block;}
-.hero{position:relative;height:100vh;min-height:850px;display:flex;align-items:flex-end;padding:4vw;}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
-.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.25);}
+a{color:inherit;text-decoration:none;}
+.label{
+font-size:10px;
+letter-spacing:.25em;
+text-transform:uppercase;
+opacity:.7;
+margin-bottom:35px;
+display:block;
+}
+.hero{
+position:relative;
+height:100vh;
+min-height:800px;
+display:flex;
+align-items:flex-end;
+padding:4vw;
+}
+.hero img{
+position:absolute;inset:0;
+width:100%;height:100%;
+object-fit:cover;
+}
+.hero-overlay{
+position:absolute;inset:0;
+background:rgba(0,0,0,.25);
+}
 .hero-content{position:relative;z-index:2;max-width:550px;}
-.hero h1{font-size:2.3rem;font-weight:400;letter-spacing:.08em;line-height:1.05;margin-bottom:20px;text-transform:uppercase;}
-.hero p{font-size:.9rem;max-width:430px;margin-bottom:10px;letter-spacing:.05em;}
-.film{display:grid;grid-template-columns:55% 45%;padding:7vw 4vw;gap:3vw;align-items:start;}
-.film-left{max-width:420px;}
-.film-left p{font-size:.8rem;letter-spacing:.05em;margin-bottom:20px;}
-.tech{font-size:.65rem;opacity:.65;line-height:1.8;}
-.film-right{display:flex;flex-direction:column;}
-.film-right img{aspect-ratio:16/9;object-fit:cover;}
-.trailer{padding:4vw 4vw 7vw;text-align:center;}
-.trailer iframe{width:70%;aspect-ratio:16/9;border:none;}
-.trailer-caption{font-size:.6rem;margin-top:15px;opacity:.5;letter-spacing:.2em;}
-.context{display:grid;grid-template-columns:58% 42%;padding:6vw 4vw;gap:4vw;align-items:start;}
-.context img{height:100%;object-fit:cover;}
-.context-text{max-width:420px;}
-.context-text p{font-size:.78rem;letter-spacing:.05em;line-height:1.7;}
-.banner img{width:100%;height:500px;object-fit:cover;}
-.filmmakers{padding:6vw 4vw;}
-.filmmakers-grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;margin-top:35px;}
-.person{display:grid;grid-template-columns:110px 1fr;gap:25px;align-items:start;}
-.person img{width:110px;height:145px;object-fit:cover;}
-.person h3{font-size:.8rem;margin-bottom:10px;opacity:.75;}
-.person p{font-size:.72rem;line-height:1.7;margin-bottom:12px;}
-.person a,.press a{font-size:.65rem;opacity:.65;color:white;text-decoration:none;}
-.press{padding:8vw 4vw 10vw;text-align:center;}
-.press p{max-width:650px;margin:auto;font-size:.8rem;line-height:1.8;margin-bottom:35px;}
-.email{font-size:1rem;margin-bottom:60px;display:block;}
-.handles{font-size:.65rem;opacity:.6;}
-@media(max-width:900px){.hero h1{font-size:1.5rem;}.film,.context,.filmmakers-grid{grid-template-columns:1fr;}.trailer iframe{width:100%;}.banner img{height:300px;}.person{grid-template-columns:1fr;}}
+.hero h1{
+font-size:2.3rem;
+font-weight:400;
+letter-spacing:.08em;
+line-height:1.05;
+margin-bottom:20px;
+}
+.hero p{font-size:.9rem;margin-bottom:10px;}
+
+.film,.context{
+display:grid;
+grid-template-columns:55% 45%;
+gap:4vw;
+padding:6vw 4vw;
+align-items:start;
+}
+.film-left,.context-text{max-width:430px;}
+.film-left p,.context-text p{
+font-size:.8rem;
+margin-bottom:20px;
+line-height:1.8;
+}
+.tech{
+font-size:.65rem;
+opacity:.65;
+line-height:1.8;
+}
+.film-right{
+display:flex;
+flex-direction:column;
+}
+.film-right img{
+aspect-ratio:16/9;
+object-fit:cover;
+}
+
+.trailer{
+padding:4vw;
+text-align:center;
+}
+.trailer iframe{
+width:75%;
+aspect-ratio:16/9;
+border:none;
+}
+.trailer-caption{
+margin-top:15px;
+font-size:.65rem;
+opacity:.6;
+letter-spacing:.15em;
+}
+
+.banner img{
+height:500px;
+object-fit:cover;
+}
+
+.filmmakers{
+padding:6vw 4vw;
+}
+.filmmakers-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:5vw;
+}
+.person{
+display:grid;
+grid-template-columns:110px 1fr;
+gap:25px;
+}
+.person img{
+width:110px;
+height:145px;
+object-fit:cover;
+}
+.person h3{
+font-size:.8rem;
+margin-bottom:10px;
+}
+.person p{
+font-size:.72rem;
+line-height:1.8;
+margin-bottom:12px;
+}
+.person a{
+font-size:.65rem;
+opacity:.7;
+}
+
+.press{
+padding:8vw 4vw;
+text-align:center;
+}
+.press p{
+max-width:650px;
+margin:auto;
+font-size:.8rem;
+line-height:1.8;
+margin-bottom:35px;
+}
+.email{
+font-size:1rem;
+display:block;
+margin-bottom:50px;
+}
+.handles{
+font-size:.7rem;
+opacity:.65;
+}
+
+@media(max-width:900px){
+.film,.context,.filmmakers-grid{
+grid-template-columns:1fr;
+}
+.trailer iframe{
+width:100%;
+}
+.person{
+grid-template-columns:1fr;
+}
+.banner img{
+height:300px;
+}
+}
 </style>
 </head>
 <body>
+
 <section class="hero">
 <img src="trailer-edit-5-aptions-creation-seque-00-01-52-08-still-009-10.png">
 <div class="hero-overlay"></div>
@@ -59,13 +185,19 @@ section{width:100%;}
 <p><em>A documentary film by Jiawa Liu</em></p>
 </div>
 </section>
-<section class="film container">
+
+<section class="film">
 <div class="film-left">
 <span class="label">THE FILM</span>
-<p>Denim Legends follows Arthur Leclercq, a Paris-based denim artisan, through a two-month apprenticeship at a historic selvedge denim mill in Okayama — an opportunity never before granted to a foreigner.</p>
+<p>Denim Legends: The Last Weavers of Japan follows Arthur Leclercq, a Paris-based denim artisan, through a two-month apprenticeship at a historic selvedge denim mill in Okayama — an opportunity never before granted to a foreigner.</p>
 <p>In suffocating midsummer heat, amid the noise of post-war shuttle looms and without a shared language, Arthur learns to operate and maintain machines that built Japan's reputation for the world's finest denim.</p>
 <p>The film reveals a world rarely seen, and even more rarely filmed — one that may not survive intact.</p>
-<div class="tech">Feature Documentary / Limited Series (3 × 30 min)<br>Filmed in Okayama, Japan<br>Languages: Japanese, French, English<br>Status: Post-production</div>
+<div class="tech">
+Feature Documentary / Limited Series (3 × 30 min)<br>
+Filmed in Okayama, Japan<br>
+Languages: Japanese, French, English<br>
+Status: Post-production
+</div>
 </div>
 <div class="film-right">
 <img src="dl-still-5-10.png">
@@ -73,9 +205,58 @@ section{width:100%;}
 <img src="trailer-edit-5-aptions-creation-seque-00-00-18-12-still-014-10.png">
 </div>
 </section>
+
 <section class="trailer">
-<iframe src="https://www.youtube.com/embed/DUIWp933gyQ"></iframe>
+<iframe src="https://www.youtube.com/embed/DUIWp933gyQ" allowfullscreen></iframe>
 <div class="trailer-caption">OFFICIAL TRAILER — DIRECTOR'S CUT</div>
 </section>
+
+<section class="context">
+<img src="trailer-edit-5-aptions-creation-seque-00-01-40-18-still-007-10.png">
+<div class="context-text">
+<span class="label">CONTEXT</span>
+<p>In the hills of Okayama Prefecture, a few family-run mills still operate on vintage shuttle looms from the 1940s and '50s. These machines built Japan's reputation as the global benchmark for selvedge denim weaving.</p>
+<p>Today, that knowledge is under threat. The challenge is not demand — Japanese selvedge denim is more sought after than ever — but the scarcity of people capable of operating and maintaining the old looms.</p>
+<p>Beyond the film itself, Denim Legends is an attempt to build lasting connections between the people, institutions, and communities who care about the future of this craft.</p>
+</div>
+</section>
+
+<section class="banner">
+<img src="ni-4-a-2416-mov-09-08-19-04-still-001-10.png">
+</section>
+
+<section class="filmmakers">
+<span class="label">THE FILMMAKERS</span>
+<div class="filmmakers-grid">
+<div class="person">
+<img src="ni-4-a-2428-mov-09-40-09-23-still-001-20.png">
+<div>
+<h3>Jiawa Liu — Director</h3>
+<p>Jiawa Liu is a London and Paris-based filmmaker and creative director. Her background spans a decade of editorial and film work for international publications and luxury brands.</p>
+<a href="https://instagram.com/beigerenegade">@beigerenegade</a>
+</div>
+</div>
+<div class="person">
+<img src="_000008680017-10.png">
+<div>
+<h3>Arthur Leclercq — Protagonist</h3>
+<p>Arthur Leclercq is a Paris-based denim artisan and founder of Superstitch, an atelier dedicated to traditional denim construction.</p>
+<a href="https://instagram.com/superstitchmfgparis">@superstitchmfgparis</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="press">
+<span class="label">PRESS & PARTNERSHIP</span>
+<p>Denim Legends is currently in post-production. The filmmakers welcome contact from press, cultural institutions, and organisations aligned with the preservation and transmission of endangered craft knowledge.</p>
+<a class="email" href="mailto:projects@beigerenegade.com">projects@beigerenegade.com</a>
+<div class="handles">
+<a href="https://instagram.com/denimlegendsfilm">@denimlegendsfilm</a> |
+<a href="https://instagram.com/beigerenegade">@beigerenegade</a> |
+<a href="https://instagram.com/superstitchmfgparis">@superstitchmfgparis</a>
+</div>
+</section>
+
 </body>
 </html>
